@@ -3,6 +3,7 @@ import Slider from '../Component/Slider';
 import Main from '../Component/Main';
 import Service from '../Component/Service';
 import About from './About';
+import Contacts from '../Component/Contacts';
 
 export const Home = () => {
   return <>
@@ -10,6 +11,7 @@ export const Home = () => {
   <Main />
   <Service/>
   <About/>
+  <Contacts/>
  
   </>
 };
