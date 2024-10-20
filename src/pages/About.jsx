@@ -5,7 +5,7 @@ const About = () => {
   return<>
 <Innerbanner/>
 
-  <section id="about" className="about section">
+  <section id="about" className="about section ">
 
 <div className="container section-title aos-init aos-animate" data-aos="fade-up">
   <h2>About Us<br/></h2>
