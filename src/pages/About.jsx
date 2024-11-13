@@ -3,8 +3,8 @@ import Innerbanner from '../Component/Innerbanner';
 
 const About = () => {
   return<>
-<Innerbanner/>
 
+{/* <Innerbanner/> */}
   <section id="about" className="about section">
 
 <div className="container section-title aos-init aos-animate" data-aos="fade-up">
@@ -40,7 +40,7 @@ const About = () => {
 
         <div className="position-relative mt-4">
           <img src="./images/about-2.jpg" className="img-fluid" alt=""/>
-          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" className="glightbox pulsating-play-btn"></a>
+          {/* <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" className="glightbox pulsating-play-btn"></a> */}
         </div>
       </div>
     </div>
@@ -49,18 +49,18 @@ const About = () => {
 </div>
 
 </section>
-<section class="about_section layout_padding">
-    <div class="container  ">
+<section className="about_section layout_padding">
+    <div className="container  ">
 
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
+      <div className="row">
+        <div className="col-md-6 ">
+          <div className="img-box">
             <img src="./images/about-img.png" alt=""/>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
+        <div className="col-md-6">
+          <div className="detail-box">
+            <div className="heading_container">
               <h2>
                 We Are Feane
               </h2>
@@ -71,9 +71,9 @@ const About = () => {
               are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
               the middle of text. All
             </p>
-            <a href="">
+            <p>
               Read More
-            </a>
+            </p>
           </div>
         </div>
       </div>

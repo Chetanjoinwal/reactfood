@@ -12,7 +12,7 @@ export const Home = () => {
   <Service/>
   <About/>
   <Contacts/>
- 
+
   </>
 };
 export default Home;

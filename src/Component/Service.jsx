@@ -1,9 +1,9 @@
 import React from 'react'
-import Innerbanner from './Innerbanner'
+// import Innerbanner from './Innerbanner'
 
 const Service = () => {
   return <>
-  <Innerbanner/>
+  {/* <Innerbanner/> */}
   <section className="ftco-section">
 		<div className="container">
 			<div className="row justify-content-center mb-5 pb-2">
