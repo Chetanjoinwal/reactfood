@@ -197,7 +197,7 @@ h6 {
   z-index: 997;
   position: relative;
   width: 100%;
-  height: 118px;
+  height: 88px;
   background-color: #030303;
 }
 
@@ -1008,7 +1008,6 @@ transform: translateY(-5px);
 .scroll-top {
   position: fixed;
   visibility: hidden;
-  opacity: 0;
   right: 15px;
   bottom: -15px;
   z-index: 99999;
@@ -1017,6 +1016,7 @@ transform: translateY(-5px);
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+  opacity: 0;
 }
 
 .scroll-top i {
@@ -1032,8 +1032,8 @@ transform: translateY(-5px);
 
 .scroll-top.active {
   visibility: visible;
-  opacity: 1;
   bottom: 15px;
+  opacity: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1115,7 +1115,7 @@ section,
 
 .hero {
   width: 100%;
-  min-height: 60vh;
+  min-height: calc(100vh - 88px);
   position: relative;
   padding: 10px 0;
   display: flex;
@@ -1183,11 +1183,42 @@ color: white;
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+.hero-wrap{
+  display: none;
+
+}
+
 @media (max-width: 640px) {
+  
+  .hero {
+    width: 100%;
+    /* min-height: 86vh; */
+  }
+
+
+
+
+ 
+    
+  .swiper-slide:before {
+    content: '';
+    position: absolute;
+    top: 46px;
+    left: -41px;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 57%;
+
+  }
+
+
+
   .hero h1 {
     font-size: 28px;
-    line-height: 36px;
-  }
+    line-height: 32px;
+    font-weight: 900;
+}
 
   .hero p {
     font-size: 18px;
@@ -1648,3 +1679,150 @@ color: white;
 /* service component end   */
 
 
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+}
+
+.contact .info-item .icon {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  font-family: var(--default-font);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .info-item .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  margin: 4px 6px 0 0;
+  transition: 0.3s;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.contact .info-item .social-links a:hover {
+  color: var(--accent-color);
+}
+
+.contact .php-email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 575px) {
+  .contact .php-email-form {
+    padding: 20px;
+  }
+}
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--surface-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contact .php-email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+
+
+@media (max-width: 640px) {
+  .main-image::before {
+      background-image: url(/public/images/banner-1.jpeg);
+      position: absolute;
+      content: '';
+      background-size: cover;
+      background-position: right -35px;
+  }
+
+  .swiper-slide:before {
+    background: linear-gradient(-45deg, #0286ccad, #3639958a, #97000b75, #cb00075c);
+}
+
+  .hero .btn-watch-video {
+      font-weight: 600;
+      color: #000000;
+      background-color: #f5f2f2a6;
+      border-radius: 25px;
+      padding: 1px 2px;
+  }
+
+  .logo-d::before{
+    width: 198px;
+  }
+  
+  .logo-d img {
+    padding: 9px 13px;
+    width: 206px;
+  }
+
+  .header .btn-getstarted{
+    display: none;
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+    /* width: 100%; */
+    height:auto;
+    position: relative;
+    transition-property: transform;
+    display: block;
+    position: absolute;
+    bottom: 21px;
+}
+}
