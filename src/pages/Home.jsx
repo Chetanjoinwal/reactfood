@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from '../Component/Slider';
 import Main from '../Component/Main';
-import Service from '../Component/Service';
+import Service from '../pages/Services';
 import About from './About';
 import Contacts from '../Component/Contacts';
 
@@ -15,4 +15,4 @@ export const Home = () => {
 
   </>
 };
-export default Home;
+export default Home

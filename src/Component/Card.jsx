@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import img1 from '../../public/images/o1.jpg'
+import img2 from '../../public/images/o2.jpg'
 const Card = () => {
   return <>
   <section className="offer_section layout_padding-bottom">
@@ -9,7 +11,7 @@ const Card = () => {
           <div className="col-md-6  ">
             <div className="box ">
               <div className="img-box">
-                <img src="./images/o1.jpg" alt=""/>
+                <img src={img1} alt=""/>
               </div>
               <div className="detail-box">
                 <h5>
@@ -80,7 +82,7 @@ const Card = () => {
           <div className="col-md-6  ">
             <div className="box ">
               <div className="img-box">
-                <img src="./images/o2.jpg" alt=""/>
+               <img src={img2} alt=""/>
               </div>
               <div className="detail-box">
                 <h5>

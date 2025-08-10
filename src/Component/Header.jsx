@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../public/logo.png'
 
 const Header = () => {
   
@@ -68,7 +69,7 @@ const Header = () => {
     <header id="header" className="header d-flex align-items-center sticky-top">
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <NavLink to="/home" className="logo logo-d">
-          <img src="./logo.png" alt=""/>
+          <img src={logo} alt=""/>
         </NavLink> 
 
         <nav id="navmenu" className="navmenu">

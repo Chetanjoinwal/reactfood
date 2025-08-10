@@ -1,10 +1,17 @@
 import React from 'react'
-import Innerbanner from './Innerbanner'
-
-const Service = () => {
+import Innerbanner from '../Component/Innerbanner'
+import breakfast1 from '../../public/images/breakfast-1.jpg'
+import breakfast2 from '../../public/images/breakfast-2.jpg'
+import breakfast3 from '../../public/images/breakfast-3.jpg'
+import breakfast4 from '../../public/images/breakfast-4.jpg'
+import breakfast5 from '../../public/images/breakfast-5.jpg'
+import breakfast6 from '../../public/images/breakfast-6.jpg'
+import breakfast7 from '../../public/images/breakfast-7.jpg'
+import breakfast8 from '../../public/images/breakfast-8.jpg'
+const Services = () => {
   return <>
-  {/* <Innerbanner/> */}
-  <section className="ftco-section">
+  <Innerbanner/>
+   <section className="ftco-section">
 		<div className="container">
 			<div className="row justify-content-center mb-5 pb-2">
 				<div className="col-md-7 text-center heading-section ftco-animate">
@@ -19,9 +26,7 @@ const Service = () => {
 							<h3>Breakfast</h3>
 						</div>
 						<div className="menus d-flex ftco-animate">
-
-<div className="menu-img img" style={{backgroundImage: `url(${src=breakfast2})`}}></div>
-
+							<div className="menu-img img" style={{backgroundImage : `url('${breakfast1}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -35,7 +40,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-2.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast2}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -49,7 +54,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus border-bottom-0 d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage:'url(./images/breakfast-3.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage:`url('${breakfast3}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -63,7 +68,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-4.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast4}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -77,7 +82,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-5.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast5}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -91,7 +96,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-6.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast6}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -105,7 +110,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-7.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast7}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -119,7 +124,7 @@ const Service = () => {
 							</div>
 						</div>
 						<div className="menus border-bottom-0 d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: 'url(./images/breakfast-8.jpg)'}}></div>
+							<div className="menu-img img" style={{backgroundImage: `url('${breakfast8}')`}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -265,7 +270,7 @@ const Service = () => {
 							<h3>Dinner</h3>
 						</div>
 						<div className="menus d-flex ftco-animate">
-							<div className="menu-img img" style={{backgroundImage: fstImg}}></div>
+							<div className="menu-img img" style={{backgroundImage: 'url(./images/dinner-1.jpg)'}}></div>
 							<div className="text">
 								<div className="d-flex">
 									<div className="one-half">
@@ -664,8 +669,9 @@ const Service = () => {
 			</div>
 		</div>
 
-	</section>  
+	</section>      
+  
   </>
 }
 
-export default Service
+export default Services
