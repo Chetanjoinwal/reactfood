@@ -4,66 +4,66 @@ import logo from '../../public/logo.png'
 
 const Header = () => {
   
-  useEffect(() => {
-    // Apply .scrolled className to the body as the page is scrolled down
-    const toggleScrolled = () => {
-      const selectBody = document.querySelector('body');
-      const selectHeader = document.querySelector('#header');
-      if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-      window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-    };
+  // useEffect(() => {
+  //   // Apply .scrolled className to the body as the page is scrolled down
+  //   const toggleScrolled = () => {
+  //     const selectBody = document.querySelector('body');
+  //     const selectHeader = document.querySelector('#header');
+  //     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+  //     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+  //   };
 
-    document.addEventListener('scroll', toggleScrolled);
-    window.addEventListener('load', toggleScrolled);
+  //   document.addEventListener('scroll', toggleScrolled);
+  //   window.addEventListener('load', toggleScrolled);
 
-    // Mobile nav toggle
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-    const mobileNavToogle = () => {
-      document.querySelector('body').classList.toggle('mobile-nav-active');
-      mobileNavToggleBtn.classList.toggle('bi-list');
-      mobileNavToggleBtn.classList.toggle('bi-x');
-    };
+  //   // Mobile nav toggle
+  //   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  //   const mobileNavToogle = () => {
+  //     document.querySelector('body').classList.toggle('mobile-nav-active');
+  //     mobileNavToggleBtn.classList.toggle('bi-list');
+  //     mobileNavToggleBtn.classList.toggle('bi-x');
+  //   };
 
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  //   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
-    // Hide mobile nav on same-page/hash links
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
-      navmenu.addEventListener('click', () => {
-        if (document.querySelector('.mobile-nav-active')) {
-          mobileNavToogle();
-        }
-      });
-    });
+  //   // Hide mobile nav on same-page/hash links
+  //   document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  //     navmenu.addEventListener('click', () => {
+  //       if (document.querySelector('.mobile-nav-active')) {
+  //         mobileNavToogle();
+  //       }
+  //     });
+  //   });
 
-    // Scroll top button
-    const scrollTop = document.querySelector('.scroll-top');
-    const toggleScrollTop = () => {
-      if (scrollTop) {
-        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-      }
-    };
+  //   // Scroll top button
+  //   const scrollTop = document.querySelector('.scroll-top');
+  //   const toggleScrollTop = () => {
+  //     if (scrollTop) {
+  //       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+  //     }
+  //   };
 
-    if (scrollTop) {
-      scrollTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
+  //   if (scrollTop) {
+  //     scrollTop.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       window.scrollTo({ top: 0, behavior: 'smooth' });
+  //     });
+  //   }
 
-    window.addEventListener('load', toggleScrollTop);
-    document.addEventListener('scroll', toggleScrollTop);
+  //   window.addEventListener('load', toggleScrollTop);
+  //   document.addEventListener('scroll', toggleScrollTop);
 
-    // Cleanup on component unmount
-    return () => {
-      document.removeEventListener('scroll', toggleScrolled);
-      window.removeEventListener('load', toggleScrolled);
-      mobileNavToggleBtn.removeEventListener('click', mobileNavToogle);
-      document.querySelectorAll('#navmenu a').forEach(navmenu => {
-        navmenu.removeEventListener('click', mobileNavToogle);
-      });
-      document.removeEventListener('scroll', toggleScrollTop);
-    };
-  }, []);  // Empty dependency array means this runs only once after component mounts
+  //   // Cleanup on component unmount
+  //   return () => {
+  //     document.removeEventListener('scroll', toggleScrolled);
+  //     window.removeEventListener('load', toggleScrolled);
+  //     mobileNavToggleBtn.removeEventListener('click', mobileNavToogle);
+  //     document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  //       navmenu.removeEventListener('click', mobileNavToogle);
+  //     });
+  //     document.removeEventListener('scroll', toggleScrollTop);
+  //   };
+  // }, []);  // Empty dependency array means this runs only once after component mounts
 
   return (
     <header id="header" className="header d-flex align-items-center sticky-top">
